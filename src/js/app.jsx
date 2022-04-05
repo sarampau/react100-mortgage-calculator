@@ -1,4 +1,5 @@
 import React from 'react';
+// import '../css/style.less';
 
 export default class App extends React.Component {
   constructor(props) {
