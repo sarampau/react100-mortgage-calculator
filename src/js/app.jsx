@@ -52,12 +52,14 @@ export default class App extends React.Component {
       <div className='container'>
         <h1>Mortgage Calculator</h1>
         <input
+          id='balance'
           name='balance'
           value={ this.state.balance }
           type='number' placeholder='0'
           onChange={ this.handleBalance }
         />
         <input
+          id='rate'
           name='rate'
           value={ this.state.rate }
           type='number' step='0.01'
@@ -65,6 +67,7 @@ export default class App extends React.Component {
           onChange={ this.handleRate }
         />
         <select
+          id='select'
           name='term'
           value={ this.state.term }
           onChange={ this.handleTerm }
@@ -72,8 +75,21 @@ export default class App extends React.Component {
           <option value={ 15 }>15</option>
           <option value={ 30 }>30</option>
         </select>
-        <button name='submit' onClick={ this.handleClick } >Submit</button>
-        <div name='output' id='output'>{`$${this.state.output} is your amount due this month.`}</div>
+        <button
+          id='submit'
+          name='submit'
+          onClick={ this.handleClick }
+        >Submit
+        </button>
+        <div
+          id='output-container'
+          name='output-container'
+        >
+          <div id='output'>
+            <p>Your amount due this month</p>
+            <p id='amount'>{`$${this.state.output}`}</p>
+          </div>
+        </div>
       </div>
     );
   }
