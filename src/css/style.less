@@ -1,3 +1,19 @@
+html {
+    height: 100%;
+}
+
+body {
+    background: linear-gradient(45deg,#4682B4, #356287, #23415A, #356287, #4682B4);
+    background-size: 600% 100%;
+    animation: gradient 16s linear infinite;
+    animation-direction: alternate;
+}
+@keyframes gradient {
+    0% {background-position: 0%}
+    100% {background-position: 100%}
+
+}
+
 .container {
     display: flex;
     flex-direction: column;
@@ -6,8 +22,12 @@
 h1 {
     display: flex;
     justify-content: center;
-    margin-bottom: 40px;
-    margin-top: 40px;
+    margin-bottom: 80px;
+    margin-top: 60px;
+    color: #1A3143;
+    font-size: 110px;
+    font-family: Righteous;
+    -webkit-text-stroke: 0.5px #BAD0E3;
 }
 
 #box {
@@ -23,20 +43,34 @@ h1 {
 
 input {
     line-height: inherit;
-    width: 250px;
     margin-bottom: 20px;
+    width: 400px;
+    height: 33px;
+    background-color: #E9F1F8;
+    border: 1px solid;
+    border-radius: 3px;
 }
 
 #select {
     line-height: inherit;
-    width: 250px;
     margin-bottom: 20px;
+    width: 400px;
+    height: 33px;
+    color: grey;
+    background-color: #E9F1F8;
+    border: 1px solid;
+    border-radius: 3px;
 }
 
 #submit {
     line-height: inherit;
-    width: 250px;
     margin-bottom: 20px;
+    width: 400px;
+    height: 33px;
+    background-color: #4682B4;
+    color: white;
+    border: 1px solid;
+    border-radius: 3px;
 }
 
 #output-container {
@@ -44,8 +78,9 @@ input {
     justify-content: center;
     border: 1px solid;
     border-radius: 3px;
-    width: 250px;
+    width: 400px;
     height: 150px;
+    background-color: #BAD0E3;
 }
 
 #output {
@@ -61,8 +96,8 @@ input {
 table {
     display: block;
     border-radius: 3px;
-    width: 350px;
-    height: 350px;
+    width: 500px;
+    height: 365px;
     overflow: scroll;
 }
 
@@ -74,6 +109,8 @@ th {
 th, td {
     border: 1px solid;
     border-radius: 3px;
+    color: #BAD0E3;
+    border-color: #BAD0E3;
     width: 150px;
     padding-left: 10px;
 }

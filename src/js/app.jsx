@@ -6,7 +6,7 @@ export default class App extends React.Component {
     this.state = {
       balance: '',
       rate: '',
-      term: 15,
+      term: '',
       output: '',
       table: []
     };
@@ -63,7 +63,7 @@ export default class App extends React.Component {
 
     for (let i = 1; i <= t; i++) {
       b = b - monthlyPayment;
-      table.push([i, parseFloat(monthlyPayment).toFixed(2), parseFloat(b).toFixed(2)]);
+      table.push([i, parseFloat(monthlyPayment).toFixed(2).replace(/\B(?=(\d{3})+(?!\d))/g, ','), parseFloat(b).toFixed(2).replace(/\B(?=(\d{3})+(?!\d))/g, ",")]);
       monthlyPayment = (numerator / denominator) * b;
     }
 
@@ -102,6 +102,7 @@ export default class App extends React.Component {
               value={ this.state.term }
               onChange={ this.handleTerm }
             >
+              <option value='' disabled='disabled'>term</option>
               <option value={ 15 }>15</option>
               <option value={ 30 }>30</option>
             </select>
@@ -127,12 +128,12 @@ export default class App extends React.Component {
               <th>Amount Due</th>
               <th>Remaining Balance</th>
             </tr>
-              {
+            {
                 table.map(i =>
                   <tr>
                     <td>{i[0]}</td>
-                    <td>{i[1]}</td>
-                    <td>{i[2]}</td>
+                    <td>{`$${i[1]}`}</td>
+                    <td>{`$${i[2]}`}</td>
                   </tr>
                 )
               }
