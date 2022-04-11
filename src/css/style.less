@@ -3,9 +3,9 @@ html {
 }
 
 body {
-    background: linear-gradient(45deg,#4682B4, #356287, #23415A, #356287, #4682B4);
+    background: linear-gradient(45deg,#E8EFF6, #A3C1DA, #74A1C7, #A3C1DA, #E8EFF6);
     background-size: 600% 100%;
-    animation: gradient 16s linear infinite;
+    animation: gradient 15s linear infinite;
     animation-direction: alternate;
 }
 @keyframes gradient {
@@ -27,7 +27,6 @@ h1 {
     color: #1A3143;
     font-size: 110px;
     font-family: Righteous;
-    -webkit-text-stroke: 0.5px #BAD0E3;
 }
 
 #box {
@@ -89,6 +88,10 @@ input {
     flex-direction: column;
 }
 
+#output p {
+    font-size: 25px;
+}
+
 #amount {
     text-align: center;
 }
@@ -104,13 +107,19 @@ table {
 th {
     text-align: center;
     height: 20px;
+    width: 150px;
+    background-color: #4682B4;
+    color: #E8EFF6;
+    position: sticky;
+    top: 0;
 }
 
-th, td {
+td {
     border: 1px solid;
     border-radius: 3px;
-    color: #BAD0E3;
-    border-color: #BAD0E3;
+    color: #4682B4;
+    border-color: #4682B4;
+    background-color: #fff;
     width: 150px;
     padding-left: 10px;
 }

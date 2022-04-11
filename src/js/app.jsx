@@ -109,6 +109,7 @@ export default class App extends React.Component {
             <button
               id='submit'
               name='submit'
+              type='submit'
               onClick={ () => { this.handleClick(); this.handleTable(); } }
             >Submit
             </button>
